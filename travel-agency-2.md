@@ -40,3 +40,10 @@ AWS Lambda, API Gateway
 * For instance, the Lambda "test event" is json.  This will go to your method as you may expect
 * However, the API Gateway "request body" is also json, but this will become an element named "body" in a large object
 * Also, even though these input and output objects are basic java objects, you may NOT use AutoValue for them, AWS freaks out
+
+Spring Booty
+
+* In stark comparison to the dumpster fire that is AWS Lambda and API Gateway (which, in the their defense, I don't know
+and don't particularly care about) day one of building an app server, I got Spring Boot and added swagger support.
+Ryan setup Jenkins on EC2 and connecting that through github was done.
+* Day 2, I added docker integration.  BOOOM!
