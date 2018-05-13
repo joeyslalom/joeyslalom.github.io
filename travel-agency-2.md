@@ -40,3 +40,26 @@ AWS Lambda, API Gateway
 * For instance, the Lambda "test event" is json.  This will go to your method as you may expect
 * However, the API Gateway "request body" is also json, but this will become an element named "body" in a large object
 * Also, even though these input and output objects are basic java objects, you may NOT use AutoValue for them, AWS freaks out
+
+I must be very sensitive.  Or maybe I'm right and JSONSpec is a good idea?
+* An appeal to authority doesn't work if nobody uses the spec.
+  * Check top APIs, from Google, Facebook, Twitter, Reddit, Stackoverflow.  Does anyone use this?
+* Architect wants to decompose an element like: { "funnyKeyName": "crazy value goes here" } 
+  into: { "keyName": "funnyKeyName", "values": [ { "value": "crazy value goes here" } ] }
+* By the way, values got turned into array because I pointed out that some value types are arrays.  So now all values have
+  type of array.
+* My warnings happily ignored (brought up in at least two conversations, the feedback is not incorporated.  THEN, he asks for
+  feedback, saying he hasn't gotten any feedback yet.  After I remind him of my points, says I'm "bike shedding." =/), 
+  I build an initial prototype.
+* Probably biased now, but initial code smells:
+  1) Obviously, payload size has been increased 4-5x
+  2) Code on consumer and producer probably has to use reflection
+  3) Losing the type info from the source types means much more sanity checks have to be added.
+      a) Situations that would be naturally be impossible must be checked (two identical keyNames)
+      b) Type information lost means code must check (value is of type array)
+      c) Some scenarios not possible to model (how do you reflect an empty array)
+      
+      
+Useful things in Kotlin / Lambda / Spring
+* wrapping all exceptions for Errors
+* interface for Xx1Params, directly populating from code like Spring Boot App, from environment variables, or from properties files
