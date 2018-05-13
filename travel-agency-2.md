@@ -63,3 +63,10 @@ I must be very sensitive.  Or maybe I'm right and JSONSpec is a good idea?
 Useful things in Kotlin / Lambda / Spring
 * wrapping all exceptions for Errors
 * interface for Xx1Params, directly populating from code like Spring Boot App, from environment variables, or from properties files
+
+Spring Booty
+
+* In stark comparison to the dumpster fire that is AWS Lambda and API Gateway (which, in the their defense, I don't know
+and don't particularly care about) day one of building an app server, I got Spring Boot and added swagger support.
+Ryan setup Jenkins on EC2 and connecting that through github was done.
+* Day 2, I added docker integration.  BOOOM!
