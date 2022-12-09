@@ -15,3 +15,8 @@ One place to put all my Google certifications
   * Series ID: 697
   * Certification ID: DjDyts
   * Issued 12/18/2017
+* Cloud DevOps Engineer
+  * [https://www.credential.net/3f3b698c-a231-4247-8ace-a789004998b2?key=3532933a6b8d9c13be334b03e1030be3f38c538c45324c5a968da2c6226177c4]
+  * Series ID: 3991
+  * Certification ID: UY5GfK
+  * Issued 12/06/2022
